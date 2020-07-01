@@ -550,7 +550,7 @@ video.asesorrural{
         -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.14);
         box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.14);
         -webkit-transform: scale(1.06);
-        transform: scale(1.06);
+        transform: scale(1.04);
     }
 }
 
@@ -585,6 +585,16 @@ video.asesorrural{
     }
 }
 
+/*Cv and contact secction*/
+.cv > .content > .columns > .column:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*cv*/
+
 .cv img {
     max-width: 310px;
     -webkit-box-shadow: 0 0px 7px 0 rgba(0, 0, 0, 0.14);
@@ -601,6 +611,23 @@ video.asesorrural{
 }
 
 
+/*Contact*/
+
+#contact-bubbles-container{
+    display:flex;
+}
+
+#contact-bubbles{
+    display: flex;
+    margin: 12px auto;
+}
+#contact-bubbles>li{
+    margin: 0 5px;
+    transition: all .4s ease;
+}
+#contact-bubbles>li:hover{
+    opacity:60%;
+}
 
 
 
