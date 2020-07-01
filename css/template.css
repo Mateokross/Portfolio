@@ -1,0 +1,293 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  font-size: 1em;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+/*selections*/
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*A better looking default horizontal rule*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers*/
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* Remove default fieldset styles.*/
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*Allow only vertical resizing of textareas.*/
+textarea {
+  resize: vertical;
+}
+/*box-sizing*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+/*remove default margin and padding*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+section{
+  overflow: hidden;
+}
+/* ==========================================================================
+   Print styles.
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* ==========================================================================
+   Quick styles
+   ========================================================================== */
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* Hide visually and from screen readers*/
+.hidden {
+  display: none !important;
+}
+/*Hide only visually, but have it available for screen readers:*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+/* Hide visually and from screen readers, but maintain layout*/
+.invisible {
+  visibility: hidden;
+}
+/*Clearfix: contain floats*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*Center: centers items inside*/
+.center,
+.center-column{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.center-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.bottom {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.single-spaced,
+.single-spaced * {
+  line-height: 1;
+}
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
+/* Columns*/
+.c1 {
+  width: 8.3333%;
+}
+.c2 {
+  width: 16.6667%;
+}
+.c3 {
+  width: 25%;
+}
+.c4 {
+  width: 33.3333%;
+}
+.c5 {
+  width: 41.6667%;
+}
+.c6 {
+  width: 50%;
+}
+.c7 {
+  width: 58.3333%;
+}
+.c8 {
+  width: 66.6667%;
+}
+.c9 {
+  width: 75%;
+}
+.c10 {
+  width: 83.3333%;
+}
+.c11 {
+  width: 91.6667%;
+}
+.c12 {
+  width: 100%;
+}
+/*container & content*/
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px auto;
+  height: auto;
+  padding: 70px 0;
+  position: relative;
+}
+.content {
+  max-width: 1050px;
+  margin: auto;
+  text-align: center; /*custom*/
+}
+.content > h2,.content > h3, .content > h4{
+  padding-bottom: 1rem;
+}
+
+/*Fix for AOS*/
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 0.001;
+  -webkit-transition-property: opacity,-webkit-transform;
+  transition-property: opacity,-webkit-transform;
+  transition-property: opacity,transform;
+  transition-property: opacity,transform,-webkit-transform;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  [data-aos^=fade][data-aos^=fade] {
+    opacity: 1;
+    transform: translateZ(0);
+}
+}
